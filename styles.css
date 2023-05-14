@@ -1,3 +1,77 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  /* # SPACE SYSTEM */
+  /* ## TYPOGRAPHY - FONT SIZES */
+  --10px: calc(10rem / 16);
+  --12px: calc(12rem / 16);
+  --14px: calc(14rem / 16);
+  --16px: calc(16rem / 16);
+  --18px: calc(18rem / 16);
+  --20px: calc(20rem / 16);
+  --24px: calc(24rem / 16);
+  --36px: calc(36rem / 16);
+  --44px: calc(44rem / 16);
+  --52px: calc(52rem / 16);
+  --62px: calc(62rem / 16);
+  --74px: calc(74rem / 16);
+  --86px: calc(86rem / 16);
+  --98px: calc(98rem / 16);
+
+  /* ## WHITESPACE */
+  --2ws: calc(2rem / 16);
+  --4ws: calc(4rem / 16);
+  --8ws: calc(8rem / 16);
+  --12ws: calc(12rem / 16);
+  --16ws: calc(16rem / 16);
+  --24ws: calc(24rem / 16);
+  --32ws: calc(32rem / 16);
+  --48ws: calc(48rem / 16);
+  --64ws: calc(64rem / 16);
+  --80ws: calc(80rem / 16);
+  --96ws: calc(96rem / 16);
+  --128ws: calc(128rem / 16);
+
+  /* # COLORS */
+  /* ### Primary */
+  /* - Light red (CTA text):  */
+  --clr-p--lr: hsl(356, 100%, 66%);
+  /* - Very light red (CTA hover background):  */
+  --clr-p--vlr: hsl(355, 100%, 74%);
+  /* - Very dark blue (headings):  */
+  --clr-p--vdb: hsl(208, 49%, 24%);
+  /* ### Neutral */
+  /* - White (text):  */
+  --clr-n--w: hsl(0, 0%, 100%);
+  /* - Grayish blue (footer text):  */
+  --clr-n--gb: hsl(240, 2%, 79%);
+  /* - Very dark grayish blue (body copy):  */
+  --clr-n--vdgb: hsl(207, 13%, 34%);
+  /* - Very dark black blue (footer background):  */
+  --clr-n--vdbb: hsl(240, 10%, 16%);
+
+  /* ### Gradient */
+  /* Background gradient - Intro/CTA mobile nav: */
+  /* - Very light red:  */
+  --clr-bg--vlr: hsl(13, 100%, 72%);
+  /* - Light red:  */
+  --clr-bg--lr: hsl(353, 100%, 62%);
+  /* Background gradient - body: */
+  /* - Very dark gray blue:  */
+  --clr-bg--vdgb: hsl(237, 17%, 21%);
+  /* - Very dark desaturated blue:  */
+  --clr-bg--vddb: hsl(237, 23%, 32%);
+}
+/* GENERAL */
+
+/* INITIAL STYLES */
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -5,3 +79,152 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* INITIAL STYLES */
+
+/* PROJECT NEW STYLES */
+
+/* REUSABLE */
+
+.list--style-none {
+  list-style: none;
+}
+.list--style-none a:link,
+.list--style-none a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex--column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: var(--36px);
+  text-align: center;
+}
+
+.btn--cta-focused:link,
+.btn--cta-focused:visited {
+  background-color: var(--clr-n--w);
+  color: var(--clr-p--lr) !important;
+}
+
+/* REUSABLE */
+
+body {
+  font-size: var(--16px);
+  font-family: "Overpass", sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-weight: 300;
+  line-height: 1;
+  color: var(--clr-n--vdgb);
+
+  position: relative;
+}
+
+.container {
+  min-width: calc(375rem / 16);
+  max-width: calc(1440rem / 16);
+}
+
+.header {
+  background: none;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--24ws);
+}
+
+.btn-menu {
+  background: none;
+}
+
+.nav {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--clr-n--w);
+  border-radius: var(--8ws);
+  box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 80vh;
+  left: 50%;
+  width: 85vw;
+  height: 80vh;
+  transform: translate(-50%, -80%);
+  font-weight: 600;
+}
+
+.nav-list {
+  gap: var(--32ws);
+  margin-top: var(--24ws);
+}
+
+.auth {
+  gap: var(--8ws);
+  margin-bottom: var(--24ws);
+}
+
+.dropdown-list {
+  display: none;
+}
+
+.auth-button {
+  background: none;
+  min-width: calc(140rem / 16);
+  padding: var(--12ws);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+
+  border-radius: var(--32ws);
+}
+
+.section-hero {
+  height: 120vh;
+  background-image: url(./images/bg-pattern-intro-mobile.svg),
+    linear-gradient(var(--clr-bg--vlr), var(--clr-bg--lr));
+  background-size: calc(1306rem / 16);
+  background-repeat: no-repeat;
+  background-position: calc(-320rem / 16) calc(-232rem / 16), 0;
+  color: var(--clr-n--w);
+  border-radius: 0 0 0 20%;
+
+  gap: var(--24ws);
+  padding: 0 var(--24ws);
+  line-height: 1.3;
+  margin-bottom: var(--96ws);
+}
+
+.section-hero-text {
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: var(--32ws);
+}
+
+.section-hero-cta {
+  display: flex;
+  gap: var(--12ws);
+}
+
+.cta-button:link,
+.cta-button:visited {
+  font-weight: 600;
+  box-shadow: 0 0 0 1px var(--clr-n--w);
+  padding: var(--12ws) var(--24ws);
+  border-radius: var(--24ws);
+}
+
+/* PROJECT NEW STYLES */

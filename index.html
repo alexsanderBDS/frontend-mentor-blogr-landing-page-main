@@ -11,13 +11,27 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
     <header class="header">
+      <img src="images/logo.svg" alt="logo" class="logo" width="80" />
+      <button class="btn-menu" type="button">
+        <img
+          src="images/icon-hamburger.svg"
+          class="menu-icon"
+          alt="menu hamburger icon"
+        />
+      </button>
       <nav class="nav">
-        <ul class="nav-list">
+        <ul class="nav-list list--style-none flex--column">
           <li class="nav-list-links">
             <a href="#dropdown-1" class="dropdown-button">Product</a>
             <ul class="dropdown-list">
@@ -68,25 +82,27 @@
             </ul>
           </li>
         </ul>
+        <ul class="auth list--style-none flex--column">
+          <li>
+            <button class="auth-button">Login</button>
+          </li>
+          <li>
+            <button class="auth-button">Sign Up</button>
+          </li>
+        </ul>
       </nav>
-      <ul class="auth">
-        <li>
-          <button class="auth-button">Login</button>
-        </li>
-        <li>
-          <button class="auth-button">Sign Up</button>
-        </li>
-      </ul>
     </header>
-    <main>
-      <section class="section-hero">
+    <main class="container">
+      <section class="section-hero flex--column">
         <h1 class="heading">A modern publishing platform</h1>
         <p class="section-hero-text">
           Grow your audience and build your online brand
         </p>
-        <ul class="section-hero-cta">
+        <ul class="section-hero-cta list--style-none">
           <li>
-            <a href="#cta-button-1" class="cta-button"> Start for Free </a>
+            <a href="#cta-button-1" class="cta-button btn--cta-focused">
+              Start for Free
+            </a>
           </li>
           <li>
             <a href="#cta-button-2" class="cta-button"> Learn More </a>
@@ -99,6 +115,7 @@
           src="./images/illustration-editor-mobile.svg"
           alt=""
           class="features-img"
+          width="300"
         />
         <div class="features-item">
           <h2 class="features-item-heading">
@@ -125,9 +142,10 @@
       </section>
       <section class="section-intro">
         <img
-          src="images/illustration-editor-mobile.svg"
+          src="images/illustration-phones.svg"
           alt=""
           class="section-intro-img"
+          width="300"
         />
         <h2 class="section-intro-heading">State of the Art Infrastructure</h2>
         <p class="section-intro-text">
@@ -142,6 +160,7 @@
           src="images/illustration-laptop-mobile.svg"
           alt=""
           class="section-how-img"
+          width="300"
         />
         <div class="section-how-item">
           <h2 class="section-how-heading">Free, open, simple</h2>
@@ -165,7 +184,7 @@
       </section>
     </main>
     <footer class="footer">
-      <img src="images/logo.svg" alt="logo" class="logo" />
+      <img src="images/logo.svg" alt="logo" class="logo" width="80" />
       <ul class="footer-links">
         <h2 class="footer-heading">Product</h2>
         <li>
