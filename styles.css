@@ -118,6 +118,22 @@ html {
   color: var(--clr-p--lr) !important;
 }
 
+/* EFFECT ON SCROLL */
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(var(--20px));
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 2s;
+}
+/* EFFECT ON SCROLL */
+
 /* REUSABLE */
 
 body {

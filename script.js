@@ -1,5 +1,7 @@
 const btnMenuEl = document.querySelector(".btn-menu");
 const dropdownLinkEl = document.querySelectorAll(".dropdown-button");
+const featuresEl = document.querySelector(".features");
+const howEl = document.querySelector(".section-how");
 
 btnMenuEl.addEventListener("click", function () {
   /**
@@ -28,3 +30,35 @@ dropdownLinkEl.forEach(function (el) {
     return el.parentNode.classList.add("open");
   });
 });
+
+// OBSERVER VIEWPORT
+
+function observer(element) {
+  const obs = new IntersectionObserver(
+    (entries) => {
+      const ent = entries[0];
+      if (!ent.isIntersecting) {
+        element.classList.add("hide");
+        element.classList.remove("show");
+      }
+      if (ent.isIntersecting) {
+        element.classList.remove("hide");
+        element.classList.add("show");
+      }
+    },
+    {
+      // In the viewport
+      root: null,
+      threshold: 0,
+      rootMargin: "-100px",
+    }
+  );
+  obs.observe(element);
+}
+
+// OBSERVER VIEWPORT
+
+// APPY OBSERVER
+observer(featuresEl);
+observer(howEl);
+// APPY OBSERVER
