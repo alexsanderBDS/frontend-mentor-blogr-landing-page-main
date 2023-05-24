@@ -33,7 +33,9 @@
       <nav class="nav">
         <ul class="nav-list list--style-none flex--column">
           <li class="nav-list-links">
-            <a href="#dropdown-1" class="dropdown-button">Product</a>
+            <a href="#dropdown-1" class="dropdown-button underline-link"
+              >Product</a
+            >
             <ul class="dropdown-list">
               <li>
                 <a href="#dropdown-1-link" class="dropdown-link">Overview</a>
@@ -55,7 +57,9 @@
             </ul>
           </li>
           <li class="nav-list-links">
-            <a href="#dropdown-2" class="dropdown-button"> Company </a>
+            <a href="#dropdown-2" class="dropdown-button underline-link">
+              Company
+            </a>
             <ul class="dropdown-list">
               <li>
                 <a href="#dropdown-2-link" class="dropdown-link">About</a>
@@ -68,7 +72,9 @@
             </ul>
           </li>
           <li class="nav-list-links">
-            <a href="#dropdown-3" class="dropdown-button"> Connect </a>
+            <a href="#dropdown-3" class="dropdown-button underline-link">
+              Connect
+            </a>
             <ul class="dropdown-list">
               <li>
                 <a href="#dropdown-3-link" class="dropdown-link">Contact</a>
@@ -99,13 +105,15 @@
           Grow your audience and build your online brand
         </p>
         <ul class="section-hero-cta list--style-none">
-          <li>
+          <li class="btn-animated">
             <a href="#cta-button-1" class="cta-button btn--cta-focused">
               Start for Free
             </a>
           </li>
           <li>
-            <a href="#cta-button-2" class="cta-button"> Learn More </a>
+            <a href="#cta-button-2" class="cta-button learn-more">
+              Learn More
+            </a>
           </li>
         </ul>
       </section>
@@ -156,12 +164,22 @@
         </p>
       </section>
       <section class="section-how">
-        <img
-          src="images/illustration-laptop-mobile.svg"
-          alt=""
-          class="section-how-img"
-          width="300"
-        />
+        <picture>
+          <source
+            media="(min-width: 1000px)"
+            srcset="./images/illustration-laptop-desktop.svg"
+          />
+          <source
+            media="(min-width: 375px)"
+            srcset="./images/illustration-laptop-mobile.svg"
+          />
+          <img
+            src="images/illustration-laptop-mobile.svg"
+            alt=""
+            width="300"
+            class="section-how-img"
+          />
+        </picture>
         <div class="section-how-item">
           <h2 class="section-how-heading">Free, open, simple</h2>
           <p class="section-how-text">
@@ -190,19 +208,29 @@
           <h2 class="footer-heading">Product</h2>
         </li>
         <li>
-          <a href="#footer-link-1" class="footer-link"> Overview </a>
+          <a href="#footer-link-1" class="footer-link underline-link">
+            Overview
+          </a>
         </li>
         <li>
-          <a href="#footer-link-2" class="footer-link"> Pricing </a>
+          <a href="#footer-link-2" class="footer-link underline-link">
+            Pricing
+          </a>
         </li>
         <li>
-          <a href="#footer-link-3" class="footer-link"> Marketplace </a>
+          <a href="#footer-link-3" class="footer-link underline-link">
+            Marketplace
+          </a>
         </li>
         <li>
-          <a href="#footer-link-4" class="footer-link"> Features </a>
+          <a href="#footer-link-4" class="footer-link underline-link">
+            Features
+          </a>
         </li>
         <li>
-          <a href="#footer-link-5" class="footer-link"> Integrations </a>
+          <a href="#footer-link-5" class="footer-link underline-link">
+            Integrations
+          </a>
         </li>
       </ul>
       <ul class="footer-links flex--column">
@@ -210,16 +238,20 @@
           <h2 class="footer-heading">Company</h2>
         </li>
         <li>
-          <a href="#footer-link-6" class="footer-link"> About </a>
+          <a href="#footer-link-6" class="footer-link underline-link">
+            About
+          </a>
         </li>
         <li>
-          <a href="#footer-link-7" class="footer-link"> Team </a>
+          <a href="#footer-link-7" class="footer-link underline-link"> Team </a>
         </li>
         <li>
-          <a href="#footer-link-8" class="footer-link"> Blog </a>
+          <a href="#footer-link-8" class="footer-link underline-link"> Blog </a>
         </li>
         <li>
-          <a href="#footer-link-9" class="footer-link"> Careers </a>
+          <a href="#footer-link-9" class="footer-link underline-link">
+            Careers
+          </a>
         </li>
       </ul>
       <ul class="footer-links flex--column">
@@ -227,13 +259,19 @@
           <h2 class="footer-heading">Connect</h2>
         </li>
         <li>
-          <a href="#footer-link-11" class="footer-link"> Contact </a>
+          <a href="#footer-link-11" class="footer-link underline-link">
+            Contact
+          </a>
         </li>
         <li>
-          <a href="#footer-link-12" class="footer-link"> Newsletter </a>
+          <a href="#footer-link-12" class="footer-link underline-link">
+            Newsletter
+          </a>
         </li>
         <li>
-          <a href="#footer-link-13" class="footer-link"> LinkedIn </a>
+          <a href="#footer-link-13" class="footer-link underline-link">
+            LinkedIn
+          </a>
         </li>
       </ul>
       <div class="attribution">

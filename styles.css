@@ -116,8 +116,15 @@ html {
 .btn--cta-focused:visited {
   background-color: var(--clr-n--w);
   color: var(--clr-p--lr) !important;
+  box-shadow: 0 0 0 0px var(--clr-bg--lr) inset !important;
 
-  position: relative;
+  transition: all 1s;
+}
+
+.btn--cta-focused:hover {
+  color: var(--clr-n--w) !important;
+  z-index: 1;
+  box-shadow: 0 0 0 100px hsl(356deg 100% 66% / 78%) inset !important;
 }
 
 /* EFFECT ON SCROLL */
@@ -135,6 +142,26 @@ html {
   transition: all 2s;
 }
 /* EFFECT ON SCROLL */
+
+.underline-link {
+  position: relative;
+}
+
+.underline-link::before {
+  content: "";
+  position: absolute;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  transition: all 0.5s;
+}
+.underline-link:hover:before {
+  width: 80%;
+}
 
 /* REUSABLE */
 
@@ -339,6 +366,13 @@ body {
   box-shadow: 0 0 0 1px var(--clr-n--w);
   padding: var(--12ws) var(--24ws);
   border-radius: var(--24ws);
+
+  transition: all 0.5s;
+}
+
+.cta-button.learn-more:hover {
+  background-color: var(--clr-n--w);
+  color: var(--clr-p--lr) !important;
 }
 
 .features {
@@ -478,10 +512,9 @@ body {
   }
 }
 
-@media (min-width: calc(600em / 16)) {
+@media (min-width: calc(647em / 16)) {
   .features-img,
-  .section-intro-img,
-  .section-how-img {
+  .section-intro-img {
     width: 80%;
     margin: auto;
   }
@@ -554,17 +587,23 @@ body {
     z-index: 1;
   }
 
-  .auth-button.sign-up:hover::after {
+  .auth-button.sign-up::after {
     position: absolute;
     content: "";
     background-color: var(--clr-p--lr);
     opacity: 0.6;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 100%;
     border-radius: var(--128ws);
     z-index: -1;
+
+    transition: all 1s;
+  }
+
+  .auth-button.sign-up:hover::after {
+    width: 100%;
   }
 
   .nav-list-links {
@@ -767,7 +806,7 @@ body {
 
   .section-how {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     margin: calc(var(--128ws) * 3) 0;
 
     position: relative;
@@ -777,7 +816,8 @@ body {
     position: absolute;
     width: calc(1000rem / 16);
     left: 0;
-    transform: translateX(-45%);
+    top: -50%;
+    transform: translate(-45%, -10%);
   }
 
   .section-how-item {
